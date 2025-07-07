@@ -1,0 +1,183 @@
+source video: DSA with Js by sheriyans Coding school
+Video 1: Basics of JavaScript -> variable, operator, operation on operator
+
+console.log(a);
+var a = 12;  // output will be undefined
+
+we can still get the output even if we remove var keyword
+this is because var is hoisted to the top of the function or global scope
+
+a = 12;
+console.log(a);  // output will be 12
+
+
+we can console log a before it is declared because of hoisting, but it will be undefined
+but with let and const, we cannot do that, lets take an example
+
+console.log(b);
+let b = 13;   // output will be ReferenceError: Cannot access 'b' before initialization
+
+here we will get a ReferenceError because b is not defined before it is declared
+this is because let and const are not hoisted in the same way as var
+
+
+undefined and not defined are totally different
+undefined means that the variable is declared but not initialized
+not defined means that the variable is not declared at all
+
+we mostly use let and const in javascript because they are block scoped
+
+> sum of two integers or numbers
+now lets add two numbers
+this is a simple example to show how to add two numbers in JavaScript
+note: we won't get any error even if we don't keep semicolon at the end of the line
+
+let a = 10;
+let b = 20;
+console.log(a + b);  // output will be 30
+
+
+> Relation between integer and string
+Now lets talk about strings
+
+10 --> number 
+10+10 --> 20 --> number
+
+"10" --> string
+"10"+"10" --> "1010" --> string
+
+"10" + 10 --> "1010" --> string
+
+adding of a number and a string will give a string, and adding of two strings will give a string. it is called concatenation not addition
+
+note: string will appear in black color in the console and number will be appeared in blue color
+
+now what if we want to know the type of the variable
+we can use "typeof" operator
+
+> sum and message
+Now lets add two numbers and print a message
+
+let a = 10;
+let b = 20;
+console.log("sum of 10 and 20 is " + a + b);  // output will be 1020, why?
+so, here "sum of 10 and 20" is an operand and a and b are operands, and + is an operator
+so, here we are adding a string and a number, so the output will be a string
+"sum of 10 and 20" + a --> "sum of 10 and 20 is 1020", this will be the output which is a string
+
+now to get the addition of a and b, we have to use parenthesis, this a simple bodmas rule, its called operator precedence in programming
+console.log("sum of 10 and 20 " + (a + b));
+out put will be "sum of 10 and 20 is 30", 
+here addition of a and b will be done first and then the string will be concatenated
+
+now what if we place a+b at the strarting?
+console.log(a+b + " is sum of 10 and 20");  // output will be 30 is sum of 10 and 20
+
+
+>type coercion
+
+console.log("10" + 10); // out will be 1010
+console.log("10" - 10); // out will be 0, why?
+console.log("10" * 10); // out will be 100, why?
+console.log("10" / 10); // out will be 1, why?
+because in javascript, if we add a string and a number, the string will be converted to a number
+but if we subtract, multiply or divide a string and a number, the string will be converted to a number
+// it depends on the operator we are using, if we are using + operator, it will concatenate the string and number, but if we are using - , * or / operator, it will convert the string to a number and perform the operation
+
+> Accept and print the answer using prompt()
+Now lets accept a number from the user and print it
+let age = prompt("What is ur age?");
+console.log(age);
+console.log(typeof(age));  
+// output will be string, because prompt returns a string
+// we can convert the string to a number using Number() function
+age = Number(age);
+console.log(typeof(age));  
+// output will be number, because we converted the string to a number
+
+> swap two variables via 3 methods
+method 1: using a temporary variable
+let a = 10;
+let b = 20;
+let c = a;
+a = b;
+b = c;
+console.log("a: " + a + ", b: " + b);  // output will be a: 20, b: 10
+ 
+ method 2: using addition and subtraction without a temporary variable
+ let a = 10;
+ let b = 20;
+ a = a + b;     // a = 30, b = 20
+ b = a - b;     // a = 30, b = 10
+ a = a - b;     // a = 20, b = 10
+
+ // method 3: using multiplication and division without a temporary variable
+ let a = 10;
+ let b = 20;
+ a = a * b;     // a = 200, b = 20
+ b = a / b;     // a = 200, b = 10
+ a = a / b      // a = 20, b = 10
+
+ // method 4: using array destructuring
+ let a = 10;
+ let b = 20;
+ [a, b] = [b, a]; // a = 20, b = 10
+
+ // method 5: using bitwise XOR operator
+ let a = 10;
+ let b = 20;
+ a = a ^ b;     // a = 30, b = 20
+
+ > Operators and questions
+ + - * / % ++ --
+ let a = 7;
+ let b = 2;
+console.log(a+b) -> output: 9
+console.log(a-b) -> output: 5
+console.log(a*b) -> output: 14
+ console.log(a/b) -> output: 3.5
+ to get the integer value of the division, we can use Math.floor() function
+ console.log(Math.floor(a/b)) -> output: 3
+ console.log(a%b) -> output: 1
+
+> Relationship operators
+ > < >= <= == != === !==
+
+console.log(10 > 20) -> output: false
+console.log(10 < 20) -> output: true
+console.log(10 >= 20) -> output: false
+console.log(10 <= 20) -> output: true
+console.log(10 == "10") -> output: true
+console.log(10 === "10") -> output: false
+console.log(10 != "10") -> output: false
+console.log(10 !== 10) -> output: false
+
+> Logical Operators
+ && || !
+ console.log(6<7 && 7>6) -> output: true
+ console.log(6<7 || 7>6) -> output: true
+ console.log(!(6<7 && 7>6)) -> output: false
+
+ > Unary Operators
+ ++ --
+
+ let a = 10; 
+ console.log(a++) -> output: 10
+ console.log(a) -> output: 11
+
+ let c = true
+ console.log(++c) -> output: 2
+ console.log(10++) -> output: error because 10 is not a variable
+
+> Math functions
+ console.log(Math.floor(10.5)); -> output: 10 // it will give the integer value of the number
+ console.log(Math.ceil(1.1));   -> output: 2 // it will give the next integer value of the number
+ console.log(Math.round(1.5));  -> output: 2 // it will give the nearest integer value of the number
+ console.log(Math.trunc(1.4));  -> output: 1 // it will give the integer value of the number without decimal
+ console.log(Math.pow(2, 3));  -> output: 8 // it will give the power of the number
+ console.log(Math.sqrt(16));  -> output: 4 // it will give the square root of the number
+ console.log(Math.cbr(27));  -> output: 3 // it will give the cube root of the number
+ console.log(Math.abs(-10));  -> output: 10 // it will give the absolute value of the number
+ console.log(Math.max(10, 20, 30));  -> output: 30 // it will give the maximum value of the number
+ console.log(Math.min(10, 20, 30));  -> output: 10 // it will give the minimum value of the number
+ console.log(Math.random());  -> output: 0.123456789 // it will give the random value between 0 and 1
