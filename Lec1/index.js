@@ -139,6 +139,9 @@
 // let b = true;
 // console.log(++b); // output will be 2, because true is converted to 1 and incremented
 
+// Ternary operator
+// let num = 0;
+// console.log(num>0? "positive": "Negative");
 
 //Math functions
 // console.log(Math.floor(10.5));

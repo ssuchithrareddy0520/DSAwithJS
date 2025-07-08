@@ -1,0 +1,43 @@
+Condiational statements
+problems
+> 1. Valid voter
+      -> take age as input using prompt
+      -> if age >= 18 then print "you are eligible to vote"
+      -> else print "you are not eligible to vote"
+
+> 2. Shop Discount
+
+      Amount           |         Discount
+      0 - 5000         |            0 %
+      5001 - 7000      |            5 %
+      7001 - 9000      |            10 %
+      more than 9001   |            20 %
+
+      -> Take total bill to be paid as input
+      -> Compare the bill with Amount and discounts above
+      -> if bill is within the Discount amount, then apply corresponding discount 
+      -> print the final bill
+
+> 3. INR Denomination
+      -> Take amount as input
+      -> print the number of 500, 200, 100, 50, 20, 10, 5, 2, 1 notes
+      -> ex: 4770 = 500 * 9 (nine 500 notes)
+             270 = 200 * 1  (one 200 note)
+             70 = 50 * 1    (one 50 note)
+             20 = 20 * 1    (one 20 note)
+        
+> Switch Case
+    Switch is used for multiple conditions
+    Syntax:
+    switch(expression){
+        case 1: //code
+                break;
+        case 2: //code
+                break;
+        defaultt: //code
+    }
+
+   -> only one case will be executed
+   -> break is used to stop the execution of the case
+   -> default is used to execute the code if none of the cases are executed
+   -> break is not mandatory in switch case

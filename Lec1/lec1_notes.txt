@@ -169,6 +169,10 @@ console.log(10 !== 10) -> output: false
  console.log(++c) -> output: 2
  console.log(10++) -> output: error because 10 is not a variable
 
+ > Ternary Operator
+ let num = 0;
+ console.log(num>0? "Positive": "Negative")
+
 > Math functions
  console.log(Math.floor(10.5)); -> output: 10 // it will give the integer value of the number
  console.log(Math.ceil(1.1));   -> output: 2 // it will give the next integer value of the number
