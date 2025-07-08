@@ -181,3 +181,21 @@ console.log(10 !== 10) -> output: false
  console.log(Math.max(10, 20, 30));  -> output: 30 // it will give the maximum value of the number
  console.log(Math.min(10, 20, 30));  -> output: 10 // it will give the minimum value of the number
  console.log(Math.random());  -> output: 0.123456789 // it will give the random value between 0 and 1
+
+> Math Problems
+> 1. Calculate area and perimeter of a rectangle
+        area = length * breadth
+        perimeter = 2 * (length + breadth)
+
+> 2. Generate OTP of 4 digits
+        use Math.random() function to generate a random number between 0 and 1
+        then multiply it by 10000 and convert it to an integer
+        then use Math.floor() function to get the integer value of the number   
+
+> 3. calculate area of triangle using heron's formula
+        area = sqrt(s * (s - a) * (s - b) * (s - c))
+        where s = (a + b + c) / 2
+
+>  4. Calculate circumference and area of a circle
+        circumference = 2 * pi * r
+        area = pi * r * r

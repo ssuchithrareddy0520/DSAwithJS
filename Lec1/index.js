@@ -141,14 +141,42 @@
 
 
 //Math functions
-console.log(Math.floor(10.5));
-console.log(Math.ceil(1.1));
-console.log(Math.round(1.4));
-console.log(Math.trunc(1.4));
-console.log(Math.pow(10, 2));
-console.log(Math.sqrt(100));
-console.log(Math.cbrt(27));
-console.log(Math.abs(-10));
-console.log(Math.min(10, 20, 30));
-console.log(Math.max(10, 20, 30));
-console.log(Math.random());
+// console.log(Math.floor(10.5));
+// console.log(Math.ceil(1.1));
+// console.log(Math.round(1.4));
+// console.log(Math.trunc(1.4));
+// console.log(Math.pow(10, 2));
+// console.log(Math.sqrt(100));
+// console.log(Math.cbrt(27));
+// console.log(Math.abs(-10));
+// console.log(Math.min(10, 20, 30));
+// console.log(Math.max(10, 20, 30));
+// console.log(Math.random());
+
+
+// > Math problems
+// 1. area and perimeter of rectangle
+// let length = 10;
+// let breadth = 5;
+// let area = length*breadth;
+// let perimeter = 2*(length+breadth);
+// console.log("Area of Reactangle is: ", area);
+// console.log("Perimeter of the Rectangle is: ", perimeter);
+
+// 2. Generate OTP of 4 digits
+console.log(Math.floor(Math.random()*10000));
+
+// 3. Area of triangle by heron's formula
+let a = 3;
+let b = 4;
+let c = 5;
+let s = (a+b+c)/2;
+let area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+console.log("Area of Triangle is: ", area);
+
+// 4. Circumference and area of circle
+let radius = 5;
+let Circumference = 2*Math.PI*radius;
+let areaOfCircle = Math.PI*radius*radius;
+console.log("Circumference of Circle is: ", Math.floor(Circumference));
+console.log("Area of Circle is: ", Math.floor(areaOfCircle));
